@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANVESHA - AI-Powered Career Guidance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+        .section {
+            scroll-snap-align: start;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 2rem 1rem;
+        }
+        .animated {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        
+        .hero-bg {
+             background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .gradient-text {
+            background: -webkit-linear-gradient(45deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-bg {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+
+    <!-- Slide 1: Hero -->
+    <section id="slide1" class="section hero-bg">
+        <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight animated" style="text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);">ANVESHA</h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-300 animated stagger-1">Your AI-Powered Compass to the Right Career Path</p>
+        </div>
+        <div class="absolute bottom-10 animate-bounce">
+            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </div>
+    </section>
+
+    <!-- Slide 2: The Crossroads Dilemma -->
+    <section id="slide2" class="section bg-gray-900">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+            <div class="animated">
+                <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">The Crossroads Dilemma</h2>
+                <h3 class="text-xl font-semibold text-gray-300 mb-6">What’s the Challenge?</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Choosing a career path is a monumental decision, yet students often face a confusing abundance of options with a significant lack of personalized guidance. This leads to stress, confusion, and a feeling of being ill-equipped for the future.
+                </p>
+            </div>
+            <div class="animated stagger-1">
+                <img src="https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?q=80&w=2070&auto=format&fit=crop" alt="Person at a crossroads" class="rounded-2xl shadow-2xl shadow-blue-500/10">
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: What Exists Today? -->
+    <section id="slide3" class="section bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 animated">What Exists Today?</h2>
+            <p class="max-w-3xl mx-auto text-gray-400 mb-12 animated stagger-1">Existing resources often fall short in providing the precise, accessible, and personalized support students truly need.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-bg p-8 rounded-2xl animated stagger-2">
+                    <h3 class="text-xl font-bold text-white mb-3">Traditional Counseling</h3>
+                    <p class="text-gray-400">Time-consuming, expensive, and often lacks the scalability to support broad student populations effectively.</p>
+                </div>
+                <div class="card-bg p-8 rounded-2xl animated stagger-3">
+                    <h3 class="text-xl font-bold text-white mb-3">Online Aptitude Tests</h3>
+                    <p class="text-gray-400">Provide generic, non-adaptive results with limited real-world applicability or deep personalization.</p>
+                </div>
+                <div class="card-bg p-8 rounded-2xl animated stagger-4">
+                    <h3 class="text-xl font-bold text-white mb-3">Career Blogs/Forums</h3>
+                    <p class="text-gray-400">Cause information overload and are difficult to distill into actionable insights for individual students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: Introducing Anvesha -->
+    <section id="slide4" class="section bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 animated">Introducing <span class="gradient-text">Anvesha</span></h2>
+            <p class="max-w-3xl mx-auto text-gray-400 mb-12 animated stagger-1">An innovative AI-powered platform designed to demystify career choices for students, offering precise and personalized recommendations.</p>
+            <div class="animated stagger-2">
+                 <img src="https://placehold.co/900x500/111827/ffffff?text=Anvesha+Platform+UI" alt="Anvesha Platform UI Screenshot" class="rounded-2xl shadow-2xl shadow-indigo-500/10 border border-gray-700">
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: How Anvesha Works -->
+    <section id="slide5" class="section bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 animated">How Anvesha Works</h2>
+            <div class="relative max-w-2xl mx-auto">
+                <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-700 hidden md:block"></div>
+                <!-- Step 1 -->
+                <div class="relative mb-12 flex items-center md:justify-start animated stagger-1">
+                    <div class="hidden md:block absolute w-4 h-4 rounded-full bg-blue-500 left-1/2 -translate-x-1/2 z-10"></div>
+                    <div class="md:w-1/2 md:pr-8">
+                        <div class="card-bg p-6 rounded-2xl text-left md:text-right">
+                            <h3 class="text-xl font-bold text-white mb-2">1. User Login</h3>
+                            <p class="text-gray-400">Secure and straightforward access to the Anvesha platform.</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Step 2 -->
+                <div class="relative mb-12 flex items-center md:justify-end animated stagger-2">
+                    <div class="hidden md:block absolute w-4 h-4 rounded-full bg-blue-500 left-1/2 -translate-x-1/2 z-10"></div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <div class="card-bg p-6 rounded-2xl text-left">
+                            <h3 class="text-xl font-bold text-white mb-2">2. Takes Survey</h3>
+                            <p class="text-gray-400">A dynamic 21-question survey designed to capture key attributes.</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Step 3 -->
+                <div class="relative mb-12 flex items-center md:justify-start animated stagger-3">
+                    <div class="hidden md:block absolute w-4 h-4 rounded-full bg-blue-500 left-1/2 -translate-x-1/2 z-10"></div>
+                    <div class="md:w-1/2 md:pr-8">
+                        <div class="card-bg p-6 rounded-2xl text-left md:text-right">
+                            <h3 class="text-xl font-bold text-white mb-2">3. AI Model Processes</h3>
+                            <p class="text-gray-400">Advanced AI algorithms analyze survey data to find optimal matches.</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Step 4 -->
+                 <div class="relative mb-12 flex items-center md:justify-end animated stagger-4">
+                    <div class="hidden md:block absolute w-4 h-4 rounded-full bg-blue-500 left-1/2 -translate-x-1/2 z-10"></div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <div class="card-bg p-6 rounded-2xl text-left">
+                            <h3 class="text-xl font-bold text-white mb-2">4. Generates Recommendation</h3>
+                            <p class="text-gray-400">Provides a primary stream recommendation with a confidence score.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: What’s Next? -->
+    <section id="slide6" class="section bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 animated">What’s Next?</h2>
+            <p class="max-w-3xl mx-auto text-gray-400 mb-12 animated stagger-1">Our vision extends far beyond current capabilities, aiming to build a comprehensive ecosystem for career development.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-bg p-8 rounded-2xl animated stagger-2">
+                    <h3 class="text-xl font-bold text-white mb-3">College Suggestions</h3>
+                    <p class="text-gray-400">AI-driven recommendations for colleges based on student profiles.</p>
+                </div>
+                <div class="card-bg p-8 rounded-2xl animated stagger-3">
+                    <h3 class="text-xl font-bold text-white mb-3">AI Learning Platform</h3>
+                    <p class="text-gray-400">Personalized courses and adaptive skill-building learning paths.</p>
+                </div>
+                <div class="card-bg p-8 rounded-2xl animated stagger-4">
+                    <h3 class="text-xl font-bold text-white mb-3">Scholarship Alerts</h3>
+                    <p class="text-gray-400">Real-time alerts about verified scholarships and scam prevention.</p>
+                </div>
+                 <div class="card-bg p-8 rounded-2xl animated stagger-5">
+                    <h3 class="text-xl font-bold text-white mb-3">Community Discussion</h3>
+                    <p class="text-gray-400">Share experiences about colleges, courses, and job interviews.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Slide 7: Team Members -->
+    <section id="slide7" class="section bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 animated">ANVESHA - Team Members</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <div class="text-center animated stagger-1">
+                    <img class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" src="https://placehold.co/200x200/3b82f6/ffffff?text=MR" alt="Megh Rana">
+                    <h3 class="font-bold text-lg">Megh Rana</h3>
+                    <p class="text-gray-400">25TCE</p>
+                </div>
+                <div class="text-center animated stagger-2">
+                    <img class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" src="https://placehold.co/200x200/8b5cf6/ffffff?text=RA" alt="Ruchir Agrawal">
+                    <h3 class="font-bold text-lg">Ruchir Agrawal</h3>
+                    <p class="text-gray-400">25TITBDS</p>
+                </div>
+                <div class="text-center animated stagger-3">
+                    <img class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" src="https://placehold.co/200x200/3b82f6/ffffff?text=HS" alt="Hetav Shah">
+                    <h3 class="font-bold text-lg">Hetav Shah</h3>
+                    <p class="text-gray-400">25TITFIM</p>
+                </div>
+                <div class="text-center animated stagger-4">
+                    <img class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" src="https://placehold.co/200x200/8b5cf6/ffffff?text=VD" alt="Vedant Dave">
+                    <h3 class="font-bold text-lg">Vedant Dave</h3>
+                    <p class="text-gray-400">25TITPN2</p>
+                </div>
+                <div class="text-center animated stagger-5">
+                    <img class="w-32 h-32 mx-auto rounded-full mb-4 object-cover" src="https://placehold.co/200x200/3b82f6/ffffff?text=MB" alt="Mohit Brahmabhatt">
+                    <h3 class="font-bold text-lg">Mohit Brahmabhatt</h3>
+                    <p class="text-gray-400">25TITKVC</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 8: Closing -->
+    <section id="slide8" class="section hero-bg">
+        <div class="text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 animated">Shaping Futures with Anvesha</h2>
+            <p class="max-w-3xl mx-auto italic text-gray-300 text-lg md:text-xl mb-8 animated stagger-1">
+                “Anvesha empowers students to choose the right career path with confidence, precision, and personalization.”
+            </p>
+            <p class="text-2xl font-semibold gradient-text animated stagger-2">Your Career, Your Way - Powered by AI</p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animated');
+            const sections = document.querySelectorAll('.section');
+            let currentSectionIndex = 0;
+
+            // --- Animation Observer ---
+            const animationObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                animationObserver.observe(el);
+            });
+
+            // --- Keyboard Navigation ---
+            const scrollToSection = (index) => {
+                if (index >= 0 && index < sections.length) {
+                    sections[index].scrollIntoView({ behavior: 'smooth' });
+                    currentSectionIndex = index;
+                }
+            };
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    e.preventDefault(); // Prevent default browser action
+                    scrollToSection(currentSectionIndex + 1);
+                } else if (e.key === 'ArrowLeft') {
+                    e.preventDefault(); // Prevent default browser action
+                    scrollToSection(currentSectionIndex - 1);
+                }
+            });
+
+            // --- Sync index on manual scroll ---
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Find the index of the intersecting section
+                        const index = Array.from(sections).indexOf(entry.target);
+                        if (index > -1) {
+                           currentSectionIndex = index;
+                        }
+                    }
+                });
+            }, {
+                root: null, // viewport
+                threshold: 0.6 // Section is considered visible when 60% is in view
+            });
+
+            sections.forEach(section => {
+                scrollObserver.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
+
